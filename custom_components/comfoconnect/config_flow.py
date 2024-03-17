@@ -123,9 +123,9 @@ class ComfoConnectConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def _register(self, pin: int = None) -> FlowResult:
         """Register on the bridge."""
 
-        if self.local_uuid is None:
+        #if self.local_uuid is None:
             # Use default UUID if non is provided
-            self.local_uuid = "00000000000000000000000000000001"
+        self.local_uuid = "00000000000e10178001144fd71dc835"
 
         # Connect to the bridge
         await self.bridge.connect(self.local_uuid)
